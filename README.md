@@ -63,7 +63,8 @@ Busca un producto por su ID de manera instantánea.
 * **URL:** `/api/productos/search/:id`
 * **Ejemplo:** `/api/productos/search/999999`
 
-**Explicación de la Estructura de Datos**
+**Explicación de la Estructura de Datos**:
+
 Se utilizó un **Objeto de JavaScript** ya que funciona como un diccionario donde la *key* es el id del producto, asi evitamos recorrer todo un array porque tiene que recorrer toda la lista, mientras que el objeto tiene un acceso directo por clave.
 
 ```javascript
