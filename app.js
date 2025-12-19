@@ -49,6 +49,19 @@ for (let i = 1; i <= 1000000; i++) {
 }
 console.log("productos cargados");
 
+//endpoint para busqueda
+app.get('/api/productos/search/:id', (req, res) => {
+    const idBuscado = req.params.id;
+
+    const producto = baseDeDatos[idBuscado];
+
+    if (producto) {
+        res.json(producto);
+    } else {
+        res.status(404).json({ mensaje: "Producto no encontrado" });
+    }
+});
+
 app.listen(3000, () => {
     console.log('servidor arrancando en http://localhost:3000');
 });
