@@ -35,6 +35,20 @@ app.post('/api/utils/word-frequency', (req, res) => {
     res.json(contador);
 });
 
+//Endpoint 2: Búsqueda Eficiente de Datos
+
+//inicializar seed con datos aleatorios
+let baseDeDatos = {}; 
+
+for (let i = 1; i <= 1000000; i++) {
+    baseDeDatos[i] = {
+        id: i,
+        nombre: `Producto ${i}`,
+        precio: (Math.random() * 100).toFixed(2)
+    };
+}
+console.log("productos cargados");
+
 app.listen(3000, () => {
     console.log('servidor arrancando en http://localhost:3000');
 });
